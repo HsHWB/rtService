@@ -10,8 +10,8 @@ public class Table implements java.io.Serializable {
 
 	private Integer idtable;
 	private String tableName;
-	private String tableNum;
-	private Boolean tableState;
+	private Integer tableNum;
+	private Integer tableState;
 
 	// Constructors
 
@@ -20,7 +20,7 @@ public class Table implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public Table(String tableName, String tableNum, Boolean tableState) {
+	public Table(String tableName, Integer tableNum, Integer tableState) {
 		this.tableName = tableName;
 		this.tableNum = tableNum;
 		this.tableState = tableState;
@@ -44,19 +44,19 @@ public class Table implements java.io.Serializable {
 		this.tableName = tableName;
 	}
 
-	public String getTableNum() {
+	public Integer getTableNum() {
 		return this.tableNum;
 	}
 
-	public void setTableNum(String tableNum) {
+	public void setTableNum(Integer tableNum) {
 		this.tableNum = tableNum;
 	}
 
-	public Boolean getTableState() {
+	public Integer getTableState() {
 		return this.tableState;
 	}
 
-	public void setTableState(Boolean tableState) {
+	public void setTableState(Integer tableState) {
 		this.tableState = tableState;
 	}
 

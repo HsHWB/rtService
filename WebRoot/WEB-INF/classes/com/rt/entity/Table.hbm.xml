@@ -13,10 +13,10 @@
         <property name="tableName" type="java.lang.String">
             <column name="table_name" length="45" not-null="true" />
         </property>
-        <property name="tableNum" type="java.lang.String">
-            <column name="table_num" length="45" not-null="true" />
+        <property name="tableNum" type="java.lang.Integer">
+            <column name="table_num" not-null="true" />
         </property>
-        <property name="tableState" type="java.lang.Boolean">
+        <property name="tableState" type="java.lang.Integer">
             <column name="table_state" not-null="true" />
         </property>
     </class>

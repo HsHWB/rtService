@@ -1,6 +1,7 @@
 package com.rt.service;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -16,5 +17,40 @@ public class Service {
 		// TODO Auto-generated method stub
 		List<Object> list = dao.queryAll(table);
 		return list;
+	}
+	
+	/**
+	 * 获取某个tableNum的table
+	 * @param table
+	 * @param tag
+	 * @return
+	 */
+	public List<Object> getItemByTableNum(String table, int tableNum){
+
+		List<Object> list = dao.queryTableNum(table, tableNum);
+		return list;
+	}
+	
+	/**
+	 * 获取某些tableState的table
+	 * @param table
+	 * @param tag
+	 * @return
+	 */
+	public List<Object> getItemByTableState(String table, int tableState){
+
+		List<Object> list = dao.queryTableState(table, tableState);
+		return list;
+	}
+	
+	/**
+	 * 更新table的state
+	 * @param table
+	 * @param tableName
+	 * @param tableNum
+	 * @param tableState
+	 */
+	public void setTableState(String table, String tableName, int tableNum, int tableState){
+		dao.setTableState(table, tableName, tableNum, tableState);
 	}
 }
